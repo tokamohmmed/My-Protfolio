@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #df2833;
+  --dark: #171717;
+  --cream: #faf8f4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+
+.header {
+  min-height: 62px;
+  padding: 12px 6.8%;
+  background: var(--dark);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 19px;
+  font-weight: 800;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+.logo b {
+  color: #eee;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.header nav a {
+  font-size: 12px;
+  color: #eee;
+}
+
+.header nav .active {
+  color: #ff555d;
+}
+
+.order {
+  background: var(--red);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 365px;
+  padding: 30px 6.8%;
+  background: #191817;
+  color: white;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 24px;
+  overflow: hidden;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  color: #eee;
+}
+
+h1 {
+  font-size: clamp(36px, 4.1vw, 58px);
+  line-height: 1.05;
+  font-weight: 900;
+}
+
+h1 span {
+  color: #f13a46;
+}
+
+.description {
+  color: #ddd;
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 330px;
+  margin: 15px 0 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 11px 18px;
+  font-size: 11px;
+  border-radius: 25px;
+}
+
+.red {
+  background: var(--red);
+  color: white;
+}
+
+.outline {
+  border: 1px solid #ddd;
+  color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: 310px;
+  background-image: url("https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=1200&q=90");
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+/* FEATURES */
+
+.features {
+  padding: 24px 6.8%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  background: #fffdfa;
+  border-bottom: 1px solid #eee8e1;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  border-right: 1px solid #eee8e1;
+}
+
+.feature:first-child {
+  padding-left: 0;
+}
+
+.feature:last-child {
+  border: none;
+  padding-right: 0;
+}
+
+.feature-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #fbe4e2;
+  color: var(--red);
+  font-size: 22px;
+}
+
+.feature h3 {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.feature p {
+  color: #777;
+  font-size: 9px;
+  line-height: 1.6;
+}
+
+/* MENU */
+
+.menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 6.8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.section-title > p {
+  font-size: 10px;
+  color: #bd5559;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.section-title > span {
+  font-size: 11px;
+  color: #777;
+}
+
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pizza-card {
+  background: white;
+  border: 1px solid #eee8e1;
+  border-radius: 6px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.pizza-card img {
+  width: 100%;
+  height: 135px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 11px;
+}
+
+.card-body h3 {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 10px;
+  color: #777;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.card-body strong {
+  display: block;
+  color: var(--red);
+  font-size: 11px;
+  margin-bottom: 9px;
+}
+
+.add {
+  display: block;
+  text-align: center;
+  background: var(--red);
+  color: white;
+  padding: 9px 4px;
+  font-size: 10px;
+  border-radius: 4px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 18px 6.8% 12px;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+
+.tagline {
+  font-size: 9px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-nav a {
+  font-size: 10px;
+}
+
+.socials {
+  display: flex;
+  gap: 13px;
+  font-weight: bold;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 9px;
+  color: #888;
+  border-top: 1px solid #303030;
+  margin-top: 15px;
+  padding-top: 12px;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+  .header {
+    padding: 12px 20px;
+    gap: 12px;
+  }
+
+  .header nav {
+    gap: 14px;
+  }
+
+  .hero {
+    padding: 25px;
+    min-height: 310px;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .features {
+    padding: 20px;
+  }
+
+  .feature {
+    gap: 8px;
+    padding: 0 9px;
+  }
+
+  .feature-icon {
+    width: 33px;
+    height: 33px;
+    font-size: 18px;
+  }
+
+  .feature h3 {
+    font-size: 10px;
+  }
+
+  .feature p {
+    font-size: 8px;
+  }
+
+  .menu {
+    padding: 28px 20px;
+  }
+
+  .pizza-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .pizza-card img {
+    height: 165px;
+  }
+
+  footer {
+    padding: 18px 20px 12px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+  .header {
+    padding: 12px 14px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 17px;
+  }
+
+  .order {
+    margin-left: auto;
+    padding: 9px 10px;
+    font-size: 10px;
+  }
+
+  .header nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    gap: 8px;
+    border-top: 1px solid #303030;
+  }
+
+  .header nav a {
+    padding: 12px 0;
+    font-size: 11px;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    padding: 28px 20px 0;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 10vw, 47px);
+  }
+
+  .description {
+    font-size: 12px;
+    margin: 12px 0 16px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+  }
+
+  .hero-image {
+    width: calc(100% + 40px);
+    height: 205px;
+    margin-left: -20px;
+    border-radius: 0;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 18px 10px;
+    gap: 18px 0;
+  }
+
+  .feature {
+    padding: 0 7px;
+    border: none;
+    gap: 8px;
+  }
+
+  .feature:nth-child(odd) {
+    border-right: 1px solid #eee8e1;
+  }
+
+  .feature-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 17px;
+  }
+
+  .feature h3 {
+    font-size: 10px;
+    margin-bottom: 4px;
+  }
+
+  .feature p {
+    font-size: 8px;
+  }
+
+  .menu {
+    padding: 26px 12px 22px;
+  }
+
+  .section-title {
+    margin-bottom: 17px;
+  }
+
+  .section-title h2 {
+    font-size: 26px;
+  }
+
+  .section-title > span {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .pizza-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .pizza-card img {
+    height: clamp(100px, 28vw, 145px);
+  }
+
+  .card-body {
+    padding: 9px;
+  }
+
+  .card-body h3 {
+    font-size: 12px;
+  }
+
+  .card-body p {
+    font-size: 9px;
+  }
+
+  .card-body strong {
+    font-size: 11px;
+  }
+
+  .add {
+    font-size: 9px;
+    padding: 9px 3px;
+  }
+
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .footer-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 24px;
+    padding-top: 8px;
+  }
+
+  .socials {
+    gap: 10px;
+  }
+}
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 350px) {
+  .header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  .order {
+    padding: 8px;
+  }
+
+  .hero {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hero-image {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+
+  .features {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .feature {
+    gap: 5px;
+    padding: 0 5px;
+  }
+
+  .feature-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pizza-grid {
+    gap: 7px;
+  }
+
+  .card-body {
+    padding: 7px;
+  }
+}

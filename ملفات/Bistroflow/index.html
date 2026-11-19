@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BistroFlow Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">🍴</div>
+      <div>
+        <h2>BistroFlow</h2>
+        <span>ADMIN SUITE</span>
+      </div>
+    </div>
+
+    <p class="menu-title">MAIN MENU</p>
+
+    <nav>
+      <a class="active" href="#">▦ &nbsp; Dashboard</a>
+      <a href="#">🛒 &nbsp; Orders</a>
+      <a href="#">♜ &nbsp; Menu List</a>
+      <a href="#">♧ &nbsp; Customers</a>
+      <a href="#">▥ &nbsp; Analytics</a>
+      <a href="#">⚙ &nbsp; Settings</a>
+    </nav>
+
+    <div class="support">
+      <h4>Kitchen Support</h4>
+      <p>POS Terminal Online &amp; Smooth</p>
+      <small>🟢 All systems operational</small>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <header class="topbar">
+      <input type="search"
+        placeholder="⌕  Search orders, dishes, customers...">
+
+      <div class="profile">
+        <span class="bell">♧</span>
+        <div class="avatar">MK</div>
+        <div>
+          <strong>M. Kareem</strong>
+          <small>Executive Chef</small>
+        </div>
+      </div>
+    </header>
+
+    <section class="content">
+
+      <div class="heading">
+        <div>
+          <h1>Dashboard Overview</h1>
+          <p>Here is your restaurant's live performance and order queue for today.</p>
+        </div>
+
+        <button id="addOrder">＋ Add New Order</button>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <div class="icon orange">＄</div>
+            <span class="positive">+14.2%</span>
+          </div>
+          <h2>$12,845.00</h2>
+          <p>Total Revenue Today</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <div class="icon purple">▣</div>
+            <span class="positive">+8.4%</span>
+          </div>
+          <h2>342</h2>
+          <p>Total Orders Placed</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <div class="icon yellow">▦</div>
+            <span class="negative">-2.1%</span>
+          </div>
+          <h2>28 Tables</h2>
+          <p>Active Reservations</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-top">
+            <div class="icon green">♧</div>
+            <span class="positive">+19.5%</span>
+          </div>
+          <h2>298</h2>
+          <p>Delivered &amp; Served</p>
+        </div>
+
+      </div>
+
+      <div class="dashboard-grid">
+
+        <section class="panel orders">
+          <div class="panel-header">
+            <h3>Recent Kitchen Orders</h3>
+            <a href="#">View Full History</a>
+          </div>
+
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>ORDER ID</th>
+                  <th>CUSTOMER</th>
+                  <th>ITEMS DETAILS</th>
+                  <th>AMOUNT</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+
+              <tbody id="ordersBody">
+
+                <tr>
+                  <td><strong>#ORD-9021</strong></td>
+                  <td>
+                    <div class="customer">
+                      <span class="customer-avatar">SA</span>
+                      <div>
+                        <strong>Sami Al-Hassan</strong>
+                        <small>Table 04</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1x Truffle Pasta,<br>1x Mocktail</td>
+                  <td><strong>$34.50</strong></td>
+                  <td><span class="status preparing">Preparing</span></td>
+                </tr>
+                <tr>
+                  <td><strong>#ORD-9020</strong></td>
+                  <td>
+                    <div class="customer">
+                      <span class="customer-avatar">LN</span>
+                      <div>
+                        <strong>Lina Nader</strong>
+                        <small>Takeaway</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>2x Prime Ribeye,<br>1x Salad</td>
+                  <td><strong>$78.00</strong></td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+
+                <tr>
+                  <td><strong>#ORD-9019</strong></td>
+                  <td>
+                    <div class="customer">
+                      <span class="customer-avatar">OK</span>
+                      <div>
+                        <strong>Omar Khaled</strong>
+                        <small>Table 12</small>
+                      </div>
+                    </div>
+                  </td>
+                  <td>1x Grilled Salmon,<br>1x Lemonade</td>
+                  <td><strong>$42.00</strong></td>
+                  <td><span class="status served">Served</span></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel dishes">
+          <div class="panel-header">
+            <h3>Popular Dishes</h3>
+            <a href="#">Manage Menu</a>
+          </div>
+
+          <div class="dish-list">
+
+            <div class="dish">
+              <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=150&q=80"
+                alt="Pan-Seared Ribeye">
+              <div class="dish-info">
+                <strong>Pan-Seared Ribeye</strong>
+                <small>142 orders this week</small>
+              </div>
+              <div class="price">
+                <strong>$38.50</strong>
+                <small>#1 Seller</small>
+              </div>
+            </div>
+
+            <div class="dish">
+              <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=150&q=80"
+                alt="Truffle Pasta">
+              <div class="dish-info">
+                <strong>Truffle Pasta</strong>
+                <small>98 orders this week</small>
+              </div>
+              <div class="price">
+                <strong>$19.00</strong>
+                <small>#2 Seller</small>
+              </div>
+            </div>
+
+            <div class="dish">
+              <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=150&q=80"
+                alt="Avocado Toast">
+              <div class="dish-info">
+                <strong>Poached Avocado</strong>
+                <small>76 orders this week</small>
+              </div>
+              <div class="price">
+                <strong>$14.00</strong>
+                <small>#3 Seller</small>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>
